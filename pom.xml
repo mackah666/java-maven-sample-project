@@ -65,11 +65,20 @@
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
         </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>com.github.danielflower.mavenplugins</groupId>
+        <artifactId>gitlog-maven-plugin</artifactId>
+        <version>1.13.17</version>
+        <configuration>
+          <simpleHTMLChangeLogFilename>gitlog.html</simpleHTMLChangeLogFilename>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
