@@ -60,3 +60,8 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
+
+      - name: Generate Security Report
+        uses: peter-murray/github-security-report-action@v2
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
